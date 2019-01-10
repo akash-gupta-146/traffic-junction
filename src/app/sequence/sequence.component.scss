@@ -395,10 +395,10 @@ $speed2: 8s;
             transform:translate(40%,0) rotate(0)
           }
           70%{
-            transform:translate(40%,-12%) rotate(-135deg)
+            transform:translate(43%,-10%) rotate(-135deg)
           }
           100%{
-            transform:translate(10%,-50%) rotate(-135deg)
+            transform:translate(8%,-50%) rotate(-135deg)
           }
     }
     @keyframes moveRight8arm{
@@ -409,7 +409,7 @@ $speed2: 8s;
             transform:translate(30%,0) rotate(0)
           }
           70%{
-            transform:translate(50%,10%) rotate(135deg)
+            transform:translate(49%,8%) rotate(135deg)
           }
           100%{
             transform:translate(10%,50%) rotate(135deg)
