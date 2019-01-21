@@ -75,55 +75,55 @@ export class SequenceComponent implements OnInit {
               "flashing_lamps":[],
               "time":30
             },
-            // // arm 5
-            {
-              "mode":"filter_green",
-              "arm_id":4,
-              "active_lamps": [
-                // "green_straight",
-                // "green_left",
-                // "green_right"
-                ],
-              "flashing_lamps":[],
-              "time":30
-            },
-            // arm 6
-            {
-              "mode":"filter_green",
-              "arm_id":4,
-              "active_lamps": [
-                // "green_straight",
-                // "green_left",
-                // "green_right"
-                ],
-              "flashing_lamps":[],
-              "time":30
-            },
-            // arm 7
-            {
-              "mode":"filter_green",
-              "arm_id":4,
-              "active_lamps": [
-                // "green_straight",
-                // "green_left",
-                // "green_right"
-                ],
-              "flashing_lamps":[],
-              "time":30
-            },
-            // arm 8
-            {
-              "mode":"filter_green",
-              "arm_id":4,
-              "active_lamps": [
-                // "green_straight",
-                // "green_left",
-                // "green_right",
-                // "u_turn"
-                ],
-              "flashing_lamps":[],
-              "time":30
-            }
+            // // // arm 5
+            // {
+            //   "mode":"filter_green",
+            //   "arm_id":4,
+            //   "active_lamps": [
+            //     // "green_straight",
+            //     // "green_left",
+            //     // "green_right"
+            //     ],
+            //   "flashing_lamps":[],
+            //   "time":30
+            // },
+            // // arm 6
+            // {
+            //   "mode":"filter_green",
+            //   "arm_id":4,
+            //   "active_lamps": [
+            //     // "green_straight",
+            //     // "green_left",
+            //     // "green_right"
+            //     ],
+            //   "flashing_lamps":[],
+            //   "time":30
+            // },
+            // // arm 7
+            // {
+            //   "mode":"filter_green",
+            //   "arm_id":4,
+            //   "active_lamps": [
+            //     // "green_straight",
+            //     // "green_left",
+            //     // "green_right"
+            //     ],
+            //   "flashing_lamps":[],
+            //   "time":30
+            // },
+            // // arm 8
+            // {
+            //   "mode":"filter_green",
+            //   "arm_id":4,
+            //   "active_lamps": [
+            //     // "green_straight",
+            //     // "green_left",
+            //     // "green_right",
+            //     // "u_turn"
+            //     ],
+            //   "flashing_lamps":[],
+            //   "time":30
+            // }
             ]
           },
 
