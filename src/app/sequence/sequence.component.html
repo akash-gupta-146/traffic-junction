@@ -9,77 +9,34 @@
             <g class="arm" *ngFor="let arm of stage.arms; let i= index" [style.transform]="'rotate('+angle*i+'deg)'">
               <rect class="cls-1 road" x="152.36" y="655.84" width="475" height="155" />
             </g>
-            <g class="arm" *ngFor="let arm of stage.arms; let i= index" [style.transform]="'rotate('+angle*i+'deg)'"
+            <g class="arm" *ngFor="let arm of stage.arms; let i = index" [style.transform]="'rotate('+angle*i+'deg)'"
               [ngClass]="1 ? 'arms-'+stage.arms.length : ''">
-              <line class="cls-2" x1="436.76" y1="732.34" x2="164.16" y2="732.34" />
 
-              <g class="object straight_car" *ngIf="arm.active_lamps.includes('green_straight')">
-                <image width="137" height="302" transform="translate(67.1 697.16) rotate(90) scale(0.22)" xlink:href="assets/green_car.png" />
-              </g>
 
-              <g class="object left_car" *ngIf="arm.active_lamps.includes('green_left')">
-                <image width="146" height="312" transform="translate(70.67 662.91) rotate(90) scale(0.22)" xlink:href="assets/green_car.png" />
-              </g>
-              <g class="object right_car" *ngIf="arm.active_lamps.includes('green_right')">
-                <image width="176" height="315" transform="translate(152 698.92) rotate(90) scale(0.22)" xlink:href="assets/red_car.png" />
-              </g>
-              <!-- free arrows -->
-              <g class="object right_arrow" *ngIf="arm.active_lamps.includes('green_right') && arm.mode=='filter_green'"
-                [ngClass]="arm.flashing_lamps.includes('green_right')? 'flash':''">
-                <image width="83" height="62" transform="translate(440 680) scale(0.8)" xlink:href="assets/right_arrow_white.png" />
-              </g>
-              <g class="object" *ngIf="arm.active_lamps.includes('green_left')  && arm.mode=='filter_green'" [ngClass]="arm.flashing_lamps.includes('green_left')? 'flash':''">
-                <image width="83" height="62" transform="translate(440 680) scale(0.8)" xlink:href="assets/left_arrow_white.png" />
-              </g>
-              <g class="object straight_arrow" *ngIf="arm.active_lamps.includes('green_straight') && arm.mode=='filter_green'"
-                [ngClass]="arm.flashing_lamps.includes('green_straight')? 'flash':''">
-                <image width="80" height="43" transform="translate(440 680) scale(0.8)" xlink:href="assets/straight_arrow_white.png" />
-              </g>
-              <!-- end of free arrows -->
+             <!-- arm name -->
+              <text class="text arm-name" x="720" y="130" fill="white">Arm {{i+1}}</text>
+              
+              <!-- slave names -->
+              <text x="700" y="180" class="text slaves">Slaves :
+                <tspan *ngFor="let slave of arm.slaves; let ylength = index" [attr.x]="700 + ((ylength)*50)" y="215">{{ slave }};</tspan>
+              </text>
+
+              <!-- Pole Names -->
+              <text x="700" y="280" class="text pole">Poles :
+                <tspan *ngFor="let pole of arm.poles; let ylength = index" [attr.x]="700 + ((ylength)*50)" y="320">{{ pole }};</tspan>
+              </text>
+
+              <!-- Detectors -->
+              <text x="700" y="380" class="text detector">Detectors :
+                <tspan *ngFor="let pole of arm.poles; let ylength = index" [attr.x]="700 + ((ylength)*50)" y="420">{{ pole }};</tspan>
+              </text>
 
 
 
-              <g class="object uTurn" *ngIf="arm.active_lamps.includes('u_turn')">
-                <image width="186" height="363" transform="translate(152 663.99) rotate(90) scale(0.18 0.2)" xlink:href="assets/taxi.png" />
-              </g>
-              <g class="object">
-                <image width="234" height="467" transform="translate(509.22 651.74) scale(0.2)" xlink:href="assets/traffic_pole.png" />
-              </g>
-              <g class="object amber" *ngIf="arm.active_lamps.includes('amber')" [ngClass]="arm.flashing_lamps.includes('amber')? 'flash':''">
-                <image width="127" height="127" transform="translate(520.19 687.31) scale(0.2)" xlink:href="assets/amber_lamp.png" />
-              </g>
-              <g class="object green" *ngIf="arm.active_lamps.includes('green_left') || arm.active_lamps.includes('green_right') || arm.active_lamps.includes('green_straight')">
-                <image width="127" height="127" transform="translate(520.19 712.31) scale(0.2)" xlink:href="assets/green_lamp.png" />
-              </g>
-              <g class="object red" *ngIf="arm.active_lamps.includes('red')" [ngClass]="arm.flashing_lamps.includes('red')? 'flash':''">
-                <image width="126" height="127" transform="translate(519.64 662.8) scale(0.2)" xlink:href="assets/red_lamp.png" />
-              </g>
-              <g class="object right_arrow" *ngIf="arm.active_lamps.includes('green_right')" [ngClass]="arm.flashing_lamps.includes('green_right')? 'flash':''">
-                <image width="83" height="62" transform="translate(556.75 737.88) scale(0.27)" xlink:href="assets/right_arrow.png" />
-              </g>
-              <g class="object" *ngIf="arm.active_lamps.includes('green_left')" [ngClass]="arm.flashing_lamps.includes('green_left')? 'flash':''">
-                <image width="83" height="62" transform="translate(556.75 702.34) scale(0.27)" xlink:href="assets/left_arrow.png" />
-              </g>
-              <g class="object straight_arrow" *ngIf="arm.active_lamps.includes('green_straight')" [ngClass]="arm.flashing_lamps.includes('green_straight')? 'flash':''">
-                <image width="80" height="43" transform="translate(561.16 722.65) scale(0.27)" xlink:href="assets/straight_arrow.png" />
-              </g>
-              <g class="object walking2" *ngIf="arm.active_lamps.includes('green_pedestrian')">
-                <image width="179" height="216" transform="translate(504.81 814.85) rotate(90) scale(0.14)" xlink:href="assets/walking2.png" />
-              </g>
-              <g class="object walking1" *ngIf="arm.active_lamps.includes('green_pedestrian')">
-                <image width="208" height="175" transform="translate(498.69 620.45) rotate(90) scale(0.14)" xlink:href="assets/walking.png" />
-              </g>
-              <g class="object" [ngClass]="arm.flashing_lamps.includes('green_pedestrian')? 'flash':''" *ngIf="arm.active_lamps.includes('green_pedestrian')">
-                <image width="495" height="550" transform="translate(521.71 747.36) scale(0.04)" xlink:href="assets/pedestrian_green.png" />
-              </g>
-              <g class="object" *ngIf="arm.active_lamps.includes('red_pedestrian')">
-                <image width="506" height="550" transform="translate(520.94 777.72) scale(0.04)" xlink:href="assets/pedestrian_red.png" />
-              </g>
             </g>
           </g>
         </g>
       </svg>
-      <label class="stage_name">STAGE {{stage_no+1}}</label>
     </div>
   </div>
 </div>

@@ -14,570 +14,154 @@ export class SequenceComponent implements OnInit {
   junctionSequence = [
     // STAGE 1
         {
-          "stage_no":1,
-          "arm_count":4,
           "arms":[
             // arm1
             {
-              "mode":"vehicular",
-              "arm_id":1,
-              "active_lamps": [
-                  // "green_straight",
-                  // "green_left",
-                  "green_right",
-                  // "u_turn",
-                  // "red",
-                  // "amber"
-                ],
-              "flashing_lamps":[],
-              "time":30
+              "name":"Arm 1",
+              "slaves": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "detectors":[
+                "D1",
+                "D2",
+                "D3"
+              ],
+              "poles":[
+                "P1",
+                "P2"
+              ]
             },
-            // arm 2
-           {
-              "mode":"filter_green",
-              "arm_id":2,
-              "active_lamps": [
-                // "green_straight",
-                // "green_left"
-                // "green_right",
-                ],
-              "flashing_lamps":[],
-              "time":30
-            },
-            // arm 3
+            // arm2
             {
-              "mode":"vehicular",
-              "arm_id":3,
-              "active_lamps": [
-                  // "green_straight",
-                  // "green_left"
-                  // "green_right",
-                  // "u_turn",
-                  // "amber",
-                  
-                  // "red"
-                ],
-              "flashing_lamps":[],
-              "time":30
+              "name":"Arm 1",
+              "slaves": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "detectors":[
+                "D1",
+                "D2",
+                "D3"
+              ],
+              "poles":[
+                "P1",
+                "P2"
+              ]
             },
-            // arm 4
-           {
-              "mode":"filter_green",
-              "arm_id":4,
-              "active_lamps": [
-                // "green_straight",
-                // "green_left",
-                // "green_right",
-                // "amber",
-                // "red",
-                // "green_pedestrian"
-                ],
-              "flashing_lamps":[],
-              "time":30
+            // arm3
+            {
+              "name":"Arm 1",
+              "slaves": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "detectors":[
+                "D1",
+                "D2",
+                "D3"
+              ],
+              "poles":[
+                "P1",
+                "P2"
+              ]
             },
-            // // // arm 5
+            // // arm4
             // {
-            //   "mode":"filter_green",
-            //   "arm_id":4,
-            //   "active_lamps": [
-            //     // "green_straight",
-            //     // "green_left",
-            //     // "green_right"
-            //     ],
-            //   "flashing_lamps":[],
-            //   "time":30
+            //   "name":"Arm 1",
+            //   "slaves": [
+            //     "S1",
+            //     "S2",
+            //     "S3"
+            //   ],
+            //   "detectors":[
+            //     "D1",
+            //     "D2",
+            //     "D3"
+            //   ],
+            //   "poles":[
+            //     "P1",
+            //     "P2"
+            //   ]
+            // },
+            // // arm 5
+            // {
+            //   "name":"Arm 1",
+            //   "slaves": [
+            //     "S1",
+            //     "S2",
+            //     "S3"
+            //   ],
+            //   "detectors":[
+            //     "D1",
+            //     "D2",
+            //     "D3"
+            //   ],
+            //   "poles":[
+            //     "P1",
+            //     "P2"
+            //   ]
             // },
             // // arm 6
             // {
-            //   "mode":"filter_green",
-            //   "arm_id":4,
-            //   "active_lamps": [
-            //     // "green_straight",
-            //     // "green_left",
-            //     // "green_right"
-            //     ],
-            //   "flashing_lamps":[],
-            //   "time":30
+            //   "name":"Arm 1",
+            //   "slaves": [
+            //     "S1",
+            //     "S2",
+            //     "S3"
+            //   ],
+            //   "detectors":[
+            //     "D1",
+            //     "D2",
+            //     "D3"
+            //   ],
+            //   "poles":[
+            //     "P1",
+            //     "P2"
+            //   ]
             // },
             // // arm 7
             // {
-            //   "mode":"filter_green",
-            //   "arm_id":4,
-            //   "active_lamps": [
-            //     // "green_straight",
-            //     // "green_left",
-            //     // "green_right"
-            //     ],
-            //   "flashing_lamps":[],
-            //   "time":30
+            //   "name":"Arm 1",
+            //   "slaves": [
+            //     "S1",
+            //     "S2",
+            //     "S3"
+            //   ],
+            //   "detectors":[
+            //     "D1",
+            //     "D2",
+            //     "D3"
+            //   ],
+            //   "poles":[
+            //     "P1",
+            //     "P2"
+            //   ]
             // },
             // // arm 8
             // {
-            //   "mode":"filter_green",
-            //   "arm_id":4,
-            //   "active_lamps": [
-            //     // "green_straight",
-            //     // "green_left",
-            //     // "green_right",
-            //     // "u_turn"
-            //     ],
-            //   "flashing_lamps":[],
-            //   "time":30
-            // }
+            //   "name":"Arm 1",
+            //   "slaves": [
+            //     "S1",
+            //     "S2",
+            //     "S3"
+            //   ],
+            //   "detectors":[
+            //     "D1",
+            //     "D2",
+            //     "D3"
+            //   ],
+            //   "poles":[
+            //     "P1",
+            //     "P2"
+            //   ]
+            // },
             ]
-          },
+          }
 
-          // STAGE 2
-          {
-            "stage_no":1,
-            "arm_count":4,
-            "arms":[
-              // arm1
-              {
-                "mode":"vehicular",
-                "arm_id":1,
-                "active_lamps": [
-                    // "green_straight",
-                    // "green_left",
-                    "green_right",
-                    // "amber"
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // arm 2
-             {
-                "mode":"filter_green",
-                "arm_id":2,
-                "active_lamps": [
-                  "green_straight",
-                  // "green_left"
-                  "green_right",
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // arm 3
-              {
-                "mode":"vehicular",
-                "arm_id":3,
-                "active_lamps": [
-                    // "green_straight",
-                    "green_left",
-                    // "green_right",
-                    // "u_turn",
-                    // "amber",
-                    // "red"
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // arm 4
-             {
-                "mode":"filter_green",
-                "arm_id":4,
-                "active_lamps": [
-                  // "green_straight",
-                  "green_left",
-                  // "green_right",
-                  // "amber",
-                  // "red",
-                  // "green_pedestrian"
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // // arm 5
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // },
-              // // arm 6
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // },
-              // // arm 7
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // },
-              // // arm 8
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right",
-              //     // "u_turn"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // }
-              ]
-            },
-
-          // STAGE 3
-          {
-            "stage_no":1,
-            "arm_count":4,
-            "arms":[
-              // arm1
-              {
-                "mode":"vehicular",
-                "arm_id":1,
-                "active_lamps": [
-                    // "green_straight",
-                    // "green_left",
-                    // "green_right",
-                    // "amber",
-                    "red",
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // arm 2
-             {
-                "mode":"filter_green",
-                "arm_id":2,
-                "active_lamps": [
-                  "green_straight",
-                  // "green_left"
-                  // "green_right",
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // arm 3
-              {
-                "mode":"vehicular",
-                "arm_id":3,
-                "active_lamps": [
-                    // "green_straight",
-                    // "green_left"
-                    // "green_right",
-                    // "u_turn",
-                    // "amber",
-                    "red",
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // arm 4
-             {
-                "mode":"filter_green",
-                "arm_id":4,
-                "active_lamps": [
-                  "green_straight",
-                  // "green_left",
-                  // "green_right",
-                  // "amber",
-                  // "red",
-                  // "green_pedestrian"
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // // arm 5
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // },
-              // // arm 6
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // },
-              // // arm 7
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // },
-              // // arm 8
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right",
-              //     // "u_turn"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // }
-              ]
-            },
-
-          // STAGE 4
-          {
-            "stage_no":1,
-            "arm_count":4,
-            "arms":[
-              // arm1
-              {
-                "mode":"vehicular",
-                "arm_id":1,
-                "active_lamps": [
-                    "green_straight",
-                    // "green_left",
-                    // "green_right",
-                    // "amber"
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // arm 2
-             {
-                "mode":"filter_green",
-                "arm_id":2,
-                "active_lamps": [
-                  // "green_straight",
-                  // "green_left"
-                  // "green_right",
-                  "red",
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // arm 3
-              {
-                "mode":"vehicular",
-                "arm_id":3,
-                "active_lamps": [
-                    "green_straight",
-                    // "green_left"
-                    // "green_right",
-                    // "u_turn",
-                    // "amber",
-                    // "red"
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // arm 4
-             {
-                "mode":"filter_green",
-                "arm_id":4,
-                "active_lamps": [
-                  // "green_straight",
-                  // "green_left",
-                  // "green_right",
-                  // "amber",
-                  "red",
-                  // "green_pedestrian"
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // // arm 5
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // },
-              // // arm 6
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // },
-              // // arm 7
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // },
-              // // arm 8
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right",
-              //     // "u_turn"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // }
-              ]
-            },
-
-          // STAGE 4
-          {
-            "stage_no":1,
-            "arm_count":4,
-            "arms":[
-              // arm1
-              {
-                "mode":"vehicular",
-                "arm_id":1,
-                "active_lamps": [
-                    // "green_straight",
-                    "green_left",
-                    // "green_right",
-                    // "amber"
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // arm 2
-             {
-                "mode":"filter_green",
-                "arm_id":2,
-                "active_lamps": [
-                  // "green_straight",
-                  "green_left"
-                  // "green_right",
-                  // "red",
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // arm 3
-              {
-                "mode":"vehicular",
-                "arm_id":3,
-                "active_lamps": [
-                    // "green_straight",
-                    // "green_left"
-                    // "green_right",
-                    // "u_turn",
-                    // "amber",
-                    // "red",
-                    "amber"
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // arm 4
-             {
-                "mode":"filter_green",
-                "arm_id":4,
-                "active_lamps": [
-                  "green_straight",
-                  // "green_left",
-                  // "green_right",
-                  // "amber",
-                  // "red",
-                  // "green_pedestrian"
-                  ],
-                "flashing_lamps":[],
-                "time":30
-              },
-              // // arm 5
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // },
-              // // arm 6
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // },
-              // // arm 7
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // },
-              // // arm 8
-              // {
-              //   "mode":"filter_green",
-              //   "arm_id":4,
-              //   "active_lamps": [
-              //     // "green_straight",
-              //     // "green_left",
-              //     // "green_right",
-              //     // "u_turn"
-              //     ],
-              //   "flashing_lamps":[],
-              //   "time":30
-              // }
-              ]
-            },
         ]
 
 armLength = this.junctionSequence[0].arms.length;
